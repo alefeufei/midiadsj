@@ -142,6 +142,10 @@ header p {
   background: #6366f1;
 }
 
+.project-card:nth-child(4):hover .btn {
+  background: #10b981;
+}
+
 footer {
   padding: 4rem 0;
   text-align: center;
@@ -168,6 +172,12 @@ footer p {
 }
 .delay-3 {
   animation-delay: 0.6s;
+}
+.delay-4 {
+  animation-delay: 0.8s;
+}
+.delay-5 {
+  animation-delay: 1s;
 }
 
 @keyframes fadeIn {
