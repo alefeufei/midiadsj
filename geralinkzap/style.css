@@ -239,10 +239,113 @@ input:focus, textarea:focus {
 
 .toast.hidden { opacity: 0; transform: translate(-50%, 20px); pointer-events: none; }
 
-/* Footer */
+/* Featured Tool Section */
+.featured-tool {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.promo-card {
+    background: #fff;
+    border-radius: var(--radius);
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.promo-image {
+    flex: 0 0 200px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.promo-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.promo-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.badge {
+    display: inline-block;
+    background: #e7f5ff;
+    color: #228be6;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+}
+
+.promo-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.promo-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.btn-promo {
+    display: inline-block;
+    background: #343a40;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: fit-content;
+    transition: background 0.2s;
+}
+
+.btn-promo:hover {
+    background: #212529;
+}
+
+@media (max-width: 600px) {
+    .promo-card {
+        flex-direction: column;
+    }
+    .promo-image {
+        flex: 0 0 150px;
+    }
+    .promo-content {
+        padding: 1.5rem;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* Footer Original Styles */
 .footer {
     text-align: center;
     margin-top: 2rem;
     color: var(--text-muted);
     font-size: 0.85rem;
 }
+

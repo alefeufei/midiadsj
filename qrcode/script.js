@@ -12,6 +12,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("qr-canvas");
   const downloadBtn = document.getElementById("download-btn");
 
+  const tabBtns = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".tab-content");
+  const waPhone = document.getElementById("wa-phone");
+  const waMessage = document.getElementById("wa-message");
+
+  let activeTab = "url";
+
+  // Tab switching
+  tabBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tabId = btn.getAttribute("data-tab");
+      activeTab = tabId;
+
+      // Update buttons
+      tabBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // Update content
+      tabContents.forEach((content) => {
+        content.classList.remove("active");
+        if (content.id === `${tabId}-container`) {
+          content.classList.add("active");
+        }
+      });
+
+      // Update required attribute
+      if (tabId === "url") {
+        qrText.required = true;
+      } else {
+        qrText.required = false;
+      }
+    });
+  });
+
   // Update labels on input change
   qrSize.addEventListener("input", (e) => {
     sizeLabel.textContent = e.target.value;
@@ -29,11 +63,28 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const text = qrText.value.trim();
+    let text = "";
+
+    if (activeTab === "url") {
+      text = qrText.value.trim();
+    } else {
+      const phone = waPhone.value.replace(/\D/g, "");
+      const message = waMessage.value.trim();
+      if (!phone) {
+        alert("Por favor, insira um número de telefone válido.");
+        return;
+      }
+      text = `https://wa.me/${phone}`;
+      if (message) {
+        text += `?text=${encodeURIComponent(message)}`;
+      }
+    }
+
     if (!text) return;
 
     // Visual feedback
     const btn = form.querySelector('button[type="submit"]');
+
     const originalText = btn.innerHTML;
     btn.innerHTML = "<span>Gerando...</span>";
     btn.disabled = true;
