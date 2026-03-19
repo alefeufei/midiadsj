@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de QR Code Premium</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- QRCode.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.1/qrcode.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4857283046221825"
+     crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="background-animation">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <main class="container">
+      <header>
+        <div class="logo-icon">QR</div>
+        <h1>Gerador de QR Code</h1>
+        <p>Crie códigos dinâmicos e vibrantes instantaneamente</p>
+      </header>
+
+      <form id="qr-form" class="glass-panel">
+        <div class="input-group full-width">
+          <label for="qr-text">Texto ou URL</label>
+          <input
+            type="text"
+            id="qr-text"
+            placeholder="https://exemplo.com.br"
+            required
+          />
+        </div>
+
+        <div class="settings-grid">
+          <div class="input-group">
+            <label for="qr-color-dark">Cor do Código</label>
+            <div class="color-picker-wrapper">
+              <input type="color" id="qr-color-dark" value="#ffffff" />
+              <span class="color-value" id="val-dark">#FFFFFF</span>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="qr-color-light">Cor de Fundo</label>
+            <div class="color-picker-wrapper transparent-bg">
+              <input type="color" id="qr-color-light" value="#000000" />
+              <span class="color-value" id="val-light">#000000</span>
+            </div>
+          </div>
+
+          <div class="input-group full-width">
+            <label for="qr-size"
+              >Tamanho: <span id="size-label">300</span>px</label
+            >
+            <input
+              type="range"
+              id="qr-size"
+              min="100"
+              max="1000"
+              step="50"
+              value="300"
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <span>Gerar QR Code</span>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </form>
+
+      <section id="result-container" class="glass-panel hidden">
+        <h2>Seu QR Code</h2>
+        <div id="qr-code-wrapper">
+          <canvas id="qr-canvas"></canvas>
+        </div>
+        <button id="download-btn" class="btn-secondary">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"
+            />
+          </svg>
+          <span>Baixar Imagem (PNG)</span>
+        </button>
+      </section>
+    </main>
+
+    <!-- App Logic -->
+    <script src="script.js"></script>
+  </body>
+</html>
