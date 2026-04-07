@@ -40,6 +40,7 @@ header h1 {
   margin-bottom: 1rem;
   background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -146,6 +147,10 @@ header p {
   background: #10b981;
 }
 
+.project-card:nth-child(5):hover .btn {
+  background: #f97316;
+}
+
 footer {
   padding: 4rem 0;
   text-align: center;
@@ -178,6 +183,9 @@ footer p {
 }
 .delay-5 {
   animation-delay: 1s;
+}
+.delay-6 {
+  animation-delay: 1.2s;
 }
 
 @keyframes fadeIn {

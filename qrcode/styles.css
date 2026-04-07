@@ -129,7 +129,6 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-
 header p {
   color: var(--text-secondary);
   font-size: 1.05rem;
@@ -203,7 +202,6 @@ header p {
   transition: var(--transition);
 }
 
-
 .glass-panel:hover {
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
@@ -235,7 +233,8 @@ label {
 }
 
 input[type="text"],
-input[type="tel"] {
+input[type="tel"],
+select {
   width: 100%;
   background: var(--input-bg);
   border: 1px solid var(--input-border);
@@ -249,7 +248,8 @@ input[type="tel"] {
 }
 
 input[type="text"]:focus,
-input[type="tel"]:focus {
+input[type="tel"]:focus,
+select:focus {
   border-color: var(--accent-1);
   box-shadow: 0 0 0 3px var(--input-focus);
 }
@@ -258,7 +258,6 @@ input[type="text"]::placeholder,
 input[type="tel"]::placeholder {
   color: #64748b;
 }
-
 
 /* Color Picker */
 .color-picker-wrapper {

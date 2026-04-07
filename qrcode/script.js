@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const tabContents = document.querySelectorAll(".tab-content");
   const waPhone = document.getElementById("wa-phone");
   const waMessage = document.getElementById("wa-message");
+  const wifiSSID = document.getElementById("wifi-ssid");
+  const wifiSecurity = document.getElementById("wifi-security");
+  const wifiPassword = document.getElementById("wifi-password");
+  const wifiHidden = document.getElementById("wifi-hidden");
+  const wifiPasswordGroup = document.getElementById("wifi-password-group");
 
   let activeTab = "url";
 
@@ -43,7 +48,24 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         qrText.required = false;
       }
+
+      if (tabId === "wifi") {
+        wifiSSID.required = true;
+      } else {
+        wifiSSID.required = false;
+      }
     });
+  });
+
+  // Ajusta exibição de campo senha Wi-Fi conforme tipo de segurança
+  wifiSecurity.addEventListener("change", () => {
+    if (wifiSecurity.value === "nopass") {
+      wifiPasswordGroup.style.display = "none";
+      wifiPassword.required = false;
+    } else {
+      wifiPasswordGroup.style.display = "block";
+      wifiPassword.required = true;
+    }
   });
 
   // Update labels on input change
@@ -67,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (activeTab === "url") {
       text = qrText.value.trim();
-    } else {
+    } else if (activeTab === "whatsapp") {
       const phone = waPhone.value.replace(/\D/g, "");
       const message = waMessage.value.trim();
       if (!phone) {
@@ -78,6 +100,40 @@ document.addEventListener("DOMContentLoaded", () => {
       if (message) {
         text += `?text=${encodeURIComponent(message)}`;
       }
+    } else if (activeTab === "wifi") {
+      const ssid = wifiSSID.value.trim();
+      const security = wifiSecurity.value;
+      const password = wifiPassword.value;
+      const hidden = wifiHidden.checked;
+
+      if (!ssid) {
+        alert("Por favor, insira o nome da rede Wi-Fi (SSID).");
+        return;
+      }
+
+      if (security !== "nopass" && !password.trim()) {
+        alert("Por favor, insira a senha da rede Wi-Fi.");
+        return;
+      }
+
+      const esc = (value) =>
+        value
+          .replace(/\\/g, "\\\\")
+          .replace(/;/g, "\\;")
+          .replace(/,/g, "\\,")
+          .replace(/:/g, "\\:");
+
+      const ssidEsc = esc(ssid);
+      const passEsc = esc(password.trim());
+
+      text = `WIFI:T:${security === "nopass" ? "nopass" : security};S:${ssidEsc};`;
+      if (security !== "nopass") {
+        text += `P:${passEsc};`;
+      }
+      if (hidden) {
+        text += "H:true;";
+      }
+      text += ";";
     }
 
     if (!text) return;
