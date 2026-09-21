@@ -92,7 +92,7 @@ export default function Services() {
             return (
               <div
                 key={service.id}
-                className="group relative bg-[#fdfdfc] rounded-2xl p-6 sm:p-10 border border-gray-100 hover:border-gold-300 hover:shadow-card transition-all duration-300 flex flex-col justify-between"
+                className="group relative bg-[#fdfdfc] rounded-2xl p-6 sm:p-8 lg:p-10 border border-gray-100 hover:border-gold-300 hover:shadow-card transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
@@ -104,7 +104,7 @@ export default function Services() {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-bold text-brand-black mb-3 group-hover:text-gold-700 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-brand-black mb-3 group-hover:text-gold-700 transition-colors">
                     {service.title}
                   </h3>
 
@@ -126,10 +126,10 @@ export default function Services() {
 
                 <button
                   onClick={() => openAlternatingWhatsApp(service.whatsappMsg)}
-                  className="inline-flex items-center justify-between w-full py-4 px-5 rounded-xl text-base font-bold text-gray-900 bg-white border border-gray-200 hover:border-gold-500 hover:bg-gold-50/50 hover:text-gold-800 transition-all duration-200 group/btn shadow-sm cursor-pointer"
+                  className="inline-flex items-center justify-between w-full py-3.5 px-4 sm:px-5 rounded-xl text-sm sm:text-base font-bold text-gray-900 bg-white border border-gray-200 hover:border-gold-500 hover:bg-gold-50/50 hover:text-gold-800 transition-all duration-200 group/btn shadow-sm cursor-pointer"
                 >
                   <span>Solicitar Proposta para este Serviço</span>
-                  <ArrowRight className="w-5 h-5 text-gold-600 group-hover/btn:translate-x-1 transition-transform flex-shrink-0" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gold-600 group-hover/btn:translate-x-1 transition-transform flex-shrink-0 ml-2" />
                 </button>
               </div>
             );
