@@ -18,5 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
   revealElements.forEach((el) => observer.observe(el));
 
   // Optional: Log successful load for debugging
-  console.log("Portfolio script loaded successfully.");
+  console.log("Portfolio v2.0 carregado com sucesso.");
 });

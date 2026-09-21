@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/ferramentas/" />
     <title>Meus Projetos | Portfolio</title>
     <meta name="description" content="Portfolio de projetos de desenvolvimento web de Alexandre (Cruv), incluindo ferramentas úteis como geradores de link e jogos." />
     <meta name="keywords" content="portfolio, desenvolvimento web, projetos, alexandre, cruv, whatsapp, qrcode, jogos" />
@@ -23,7 +24,8 @@
     <meta property="twitter:image" content="https://midiadsj.com/images/encurtador.png" />
 
     <link rel="canonical" href="https://midiadsj.com/" />
-    <link rel="stylesheet" href="style.css?v=1.0.1" />
+    <meta name="version" content="2.0.0" />
+    <link rel="stylesheet" href="style.css?v=2.0.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,6 +53,7 @@
   <body>
     <header>
       <div class="container">
+        <div class="version-badge fade-in">v2.0</div>
         <h1 class="fade-in">Ferramentas MídiaDSJ</h1>
         <p class="fade-in delay-1">
           Uma coleção de ferramentas úteis para o dia a dia.
@@ -148,7 +151,7 @@
               Gerencie seu tempo com eficiência usando a técnica Pomodoro.
             </p>
             <a
-              href="https://midiadsj.com/pomodoro/"
+              href="pomodoro/index.html"
               target="_blank"
               class="btn"
               >Ver Projeto</a
@@ -174,6 +177,25 @@
             >
           </div>
         </article>
+
+        <!-- Project 7: Leitura Bíblica -->
+        <article class="project-card fade-in delay-8">
+          <div class="card-image">
+            <img src="images/leitura_biblica.png" alt="Planos de Leitura Bíblica" />
+          </div>
+          <div class="card-content">
+            <h2>Planos de Leitura Bíblica</h2>
+            <p>
+              Acompanhe planos de leitura bíblica diários para edificar e enriquecer sua fé.
+            </p>
+            <a
+              href="leiturabiblica/index.html"
+              target="_blank"
+              class="btn"
+              >Ver Projeto</a
+            >
+          </div>
+        </article>
       </section>
 
 
@@ -185,7 +207,7 @@
       </div>
     </footer>
 
-    <script src="script.js?v=1.0.1"></script>
+    <script src="script.js?v=2.0.0"></script>
 
   </body>
 </html>
