@@ -73,7 +73,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-gold-700 bg-gold-50 border border-gold-200 px-3.5 py-1.5 rounded-full">
+          <span className="text-sm font-bold tracking-wider uppercase text-gold-700 bg-gold-50 border border-gold-200 px-4 py-1.5 rounded-full">
             Nossas Especialidades
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-black tracking-tight mt-4 mb-4">
@@ -92,29 +92,29 @@ export default function Services() {
             return (
               <div
                 key={service.id}
-                className="group relative bg-[#fdfdfc] rounded-2xl p-8 sm:p-10 border border-gray-100 hover:border-gold-300 hover:shadow-card transition-all duration-300 flex flex-col justify-between"
+                className="group relative bg-[#fdfdfc] rounded-2xl p-6 sm:p-10 border border-gray-100 hover:border-gold-300 hover:shadow-card transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-14 h-14 rounded-xl bg-gold-50 border border-gold-200/60 flex items-center justify-center text-gold-600 group-hover:bg-gold-500 group-hover:text-white transition-colors duration-300">
                       <Icon className="w-7 h-7" />
                     </div>
-                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-gray-100 text-gray-700">
+                    <span className="text-xs sm:text-sm font-semibold px-3 py-1 rounded-full bg-gray-100 text-gray-700">
                       {service.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-brand-black mb-3 group-hover:text-gold-700 transition-colors">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-brand-black mb-3 group-hover:text-gold-700 transition-colors">
                     {service.title}
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed mb-6 text-sm sm:text-base">
+                  <p className="text-gray-600 leading-relaxed mb-6 text-base">
                     {service.description}
                   </p>
 
-                  <div className="space-y-3 pt-4 border-t border-gray-100 mb-8">
+                  <div className="space-y-3.5 pt-4 border-t border-gray-100 mb-8">
                     {service.features.map((feat, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5 text-sm text-gray-700">
+                      <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
                         <div className="w-5 h-5 rounded-full bg-gold-100/70 text-gold-700 flex items-center justify-center flex-shrink-0 mt-0.5">
                           <Check className="w-3.5 h-3.5" />
                         </div>
@@ -126,10 +126,10 @@ export default function Services() {
 
                 <button
                   onClick={() => openAlternatingWhatsApp(service.whatsappMsg)}
-                  className="inline-flex items-center justify-between w-full py-3.5 px-5 rounded-xl text-sm font-bold text-gray-900 bg-white border border-gray-200 hover:border-gold-500 hover:bg-gold-50/50 hover:text-gold-800 transition-all duration-200 group/btn shadow-sm cursor-pointer"
+                  className="inline-flex items-center justify-between w-full py-4 px-5 rounded-xl text-base font-bold text-gray-900 bg-white border border-gray-200 hover:border-gold-500 hover:bg-gold-50/50 hover:text-gold-800 transition-all duration-200 group/btn shadow-sm cursor-pointer"
                 >
                   <span>Solicitar Proposta para este Serviço</span>
-                  <ArrowRight className="w-4 h-4 text-gold-600 group-hover/btn:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 text-gold-600 group-hover/btn:translate-x-1 transition-transform flex-shrink-0" />
                 </button>
               </div>
             );

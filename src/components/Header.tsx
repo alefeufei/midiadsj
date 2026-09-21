@@ -109,36 +109,36 @@ export default function Header() {
             <Link
               href="#inicio"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-medium text-gray-800 hover:text-gold-600 py-1"
+              className="text-lg font-semibold text-gray-800 hover:text-gold-600 py-1"
             >
               Início
             </Link>
             <Link
               href="#servicos"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-medium text-gray-800 hover:text-gold-600 py-1"
+              className="text-lg font-semibold text-gray-800 hover:text-gold-600 py-1"
             >
               Serviços
             </Link>
             <Link
               href="#diferenciais"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-medium text-gray-800 hover:text-gold-600 py-1"
+              className="text-lg font-semibold text-gray-800 hover:text-gold-600 py-1"
             >
               Diferenciais
             </Link>
             <Link
               href="/ferramentas"
               onClick={() => setMobileMenuOpen(false)}
-              className="inline-flex items-center justify-between text-base font-semibold text-gold-700 bg-gold-50 px-4 py-2.5 rounded-xl border border-gold-200"
+              className="inline-flex items-center justify-between text-lg font-bold text-gold-700 bg-gold-50 px-4 py-3 rounded-xl border border-gold-200"
             >
               <span>Central de Ferramentas</span>
-              <ArrowUpRight className="w-4 h-4 text-gold-600" />
+              <ArrowUpRight className="w-5 h-5 text-gold-600" />
             </Link>
             <Link
               href="#contato"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-medium text-gray-800 hover:text-gold-600 py-1"
+              className="text-lg font-semibold text-gray-800 hover:text-gold-600 py-1"
             >
               Contato
             </Link>
@@ -148,9 +148,9 @@ export default function Header() {
                 setMobileMenuOpen(false);
                 handleBudgetClick(e);
               }}
-              className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold text-white bg-brand-black hover:bg-gold-600 transition-colors shadow-md cursor-pointer"
+              className="inline-flex items-center justify-center gap-2.5 w-full py-3.5 rounded-xl text-base font-bold text-white bg-brand-black hover:bg-gold-600 transition-colors shadow-md cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4 text-gold-400" />
+              <MessageCircle className="w-5 h-5 text-gold-400" />
               <span>Solicitar Orçamento via WhatsApp</span>
             </button>
           </div>

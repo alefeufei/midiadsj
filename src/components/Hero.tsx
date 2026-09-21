@@ -21,13 +21,13 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-50 border border-gold-200/80 text-gold-800 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
-            <Sparkles className="w-4 h-4 text-gold-600 animate-spin" style={{ animationDuration: "6s" }} />
-            <span>Desenvolvimento Web de Alto Padrão & Performance</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-50 border border-gold-200/80 text-gold-800 text-sm font-semibold mb-6 shadow-sm">
+            <Sparkles className="w-4 h-4 text-gold-600 animate-spin flex-shrink-0" style={{ animationDuration: "6s" }} />
+            <span>Desenvolvimento Web de Alto Padrão</span>
           </div>
 
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-black tracking-tight leading-[1.15] mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-black tracking-tight leading-[1.18] mb-6">
             Criamos <span className="text-gradient-gold">Sites</span>,{" "}
             <span className="text-gradient-gold">Sistemas Web</span> e{" "}
             <span className="text-gradient-gold">Landing Pages</span> que Geram Resultados
@@ -42,16 +42,16 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={handleWhatsAppClick}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base font-bold text-white bg-brand-black hover:bg-gold-600 transition-all duration-300 shadow-lg hover:shadow-gold hover:-translate-y-0.5 group cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-base sm:text-lg font-bold text-white bg-brand-black hover:bg-gold-600 transition-all duration-300 shadow-lg hover:shadow-gold hover:-translate-y-0.5 group cursor-pointer"
             >
-              <MessageCircle className="w-5 h-5 text-gold-400 group-hover:text-white transition-colors" />
+              <MessageCircle className="w-5 h-5 text-gold-400 group-hover:text-white transition-colors flex-shrink-0" />
               <span>Solicitar Orçamento no WhatsApp</span>
               <ArrowRight className="w-4 h-4 opacity-70 group-hover:translate-x-1 transition-transform" />
             </button>
 
             <Link
               href="#servicos"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-gray-800 bg-white hover:bg-gray-50 border border-gray-200 hover:border-gold-300 transition-all duration-200 shadow-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base sm:text-lg font-semibold text-gray-800 bg-white hover:bg-gray-50 border border-gray-200 hover:border-gold-300 transition-all duration-200 shadow-sm"
             >
               <span>Conhecer Nossas Soluções</span>
             </Link>

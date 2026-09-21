@@ -21,17 +21,17 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
+            <p className="text-base text-gray-400 max-w-sm leading-relaxed">
               Agência especializada no desenvolvimento de sites de alta performance, landing pages que convertem e sistemas web sob medida para impulsionar o seu negócio.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+            <h4 className="text-white text-base font-bold uppercase tracking-wider mb-4">
               Navegação
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-3 text-base">
               <li>
                 <Link href="#inicio" className="hover:text-gold-400 transition-colors">
                   Início
@@ -50,10 +50,10 @@ export default function Footer() {
               <li>
                 <Link
                   href="/ferramentas"
-                  className="inline-flex items-center gap-1 text-gold-400 hover:text-gold-300 font-medium transition-colors"
+                  className="inline-flex items-center gap-1.5 text-gold-400 hover:text-gold-300 font-semibold transition-colors"
                 >
                   <span>Central de Ferramentas</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </li>
               <li>
@@ -66,10 +66,10 @@ export default function Footer() {
 
           {/* Soluções */}
           <div>
-            <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+            <h4 className="text-white text-base font-bold uppercase tracking-wider mb-4">
               Soluções Web
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-3 text-base">
               <li>
                 <span className="text-gray-400">Landing Pages para Tráfego</span>
               </li>
@@ -90,18 +90,18 @@ export default function Footer() {
 
           {/* Contato Rápido */}
           <div>
-            <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
+            <h4 className="text-white text-base font-bold uppercase tracking-wider mb-4">
               Contato Direto
             </h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3.5 text-base">
               <li>
                 <a
                   href="https://wa.me/5521964167030?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es!"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-300 hover:text-gold-400 transition-colors"
+                  className="inline-flex items-center gap-2.5 text-gray-300 hover:text-gold-400 transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4 text-gold-500" />
+                  <MessageCircle className="w-5 h-5 text-gold-500" />
                   <span>(21) 96416-7030</span>
                 </a>
               </li>
@@ -110,18 +110,18 @@ export default function Footer() {
                   href="https://wa.me/5521964319242?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es!"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gray-300 hover:text-gold-400 transition-colors"
+                  className="inline-flex items-center gap-2.5 text-gray-300 hover:text-gold-400 transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4 text-gold-500" />
+                  <MessageCircle className="w-5 h-5 text-gold-500" />
                   <span>(21) 96431-9242</span>
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:contato@midiadsj.com"
-                  className="inline-flex items-center gap-2 text-gray-300 hover:text-gold-400 transition-colors"
+                  className="inline-flex items-center gap-2.5 text-gray-300 hover:text-gold-400 transition-colors"
                 >
-                  <Mail className="w-4 h-4 text-gold-500" />
+                  <Mail className="w-5 h-5 text-gold-500" />
                   <span>contato@midiadsj.com</span>
                 </a>
               </li>
@@ -130,7 +130,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
           <p>
             &copy; {currentYear} Mídia DSJ - Comunicação & Marketing. Todos os direitos reservados.
           </p>

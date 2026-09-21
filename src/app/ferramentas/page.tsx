@@ -114,17 +114,17 @@ export default function FerramentasPage() {
         {/* Breadcrumb & Intro Header */}
         <div className="bg-gradient-to-b from-gray-50 via-white to-transparent border-b border-gray-100 py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex items-center gap-2 text-xs font-medium text-gray-500 mb-6">
+            <nav className="flex items-center gap-2 text-sm font-medium text-gray-500 mb-6">
               <Link href="/" className="hover:text-gold-600 transition-colors">
                 Início
               </Link>
-              <ChevronRight className="w-3.5 h-3.5" />
+              <ChevronRight className="w-4 h-4" />
               <span className="text-gold-700 font-semibold">Ferramentas</span>
             </nav>
 
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-50 border border-gold-200 text-gold-800 text-xs font-bold mb-4 shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-gold-600" />
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-50 border border-gold-200 text-gold-800 text-sm font-bold mb-4 shadow-sm">
+                <Sparkles className="w-4 h-4 text-gold-600" />
                 <span>Central de Utilidades Online</span>
               </div>
 
@@ -151,7 +151,7 @@ export default function FerramentasPage() {
                 >
                   <div>
                     {/* Visual Banner Preview */}
-                    <div className="relative h-44 w-full bg-gradient-to-br from-gray-50 to-gray-100 border-b border-gray-100 flex items-center justify-center overflow-hidden p-4">
+                    <div className="relative h-48 w-full bg-gradient-to-br from-gray-50 to-gray-100 border-b border-gray-100 flex items-center justify-center overflow-hidden p-4">
                       {tool.image ? (
                         <div className="relative w-full h-full flex items-center justify-center">
                           <Image
@@ -167,7 +167,7 @@ export default function FerramentasPage() {
                         </div>
                       )}
 
-                      <span className="absolute top-3 right-3 text-[11px] font-bold px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm text-gold-800 border border-gold-200/80 shadow-xs">
+                      <span className="absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-gold-800 border border-gold-200/80 shadow-xs">
                         {tool.badge}
                       </span>
                     </div>
@@ -180,11 +180,11 @@ export default function FerramentasPage() {
                         </span>
                       </div>
 
-                      <h2 className="text-xl font-bold text-brand-black mb-2.5 group-hover:text-gold-700 transition-colors">
+                      <h2 className="text-xl sm:text-2xl font-bold text-brand-black mb-2.5 group-hover:text-gold-700 transition-colors">
                         {tool.title}
                       </h2>
 
-                      <p className="text-sm text-gray-600 leading-relaxed line-clamp-3">
+                      <p className="text-base text-gray-600 leading-relaxed line-clamp-3">
                         {tool.description}
                       </p>
                     </div>
@@ -196,7 +196,7 @@ export default function FerramentasPage() {
                       href={tool.link}
                       target={tool.isExternal ? "_blank" : "_self"}
                       rel={tool.isExternal ? "noopener noreferrer" : undefined}
-                      className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl text-sm font-bold text-white bg-brand-black hover:bg-gold-600 transition-all duration-200 shadow-sm group/btn"
+                      className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl text-base font-bold text-white bg-brand-black hover:bg-gold-600 transition-all duration-200 shadow-sm group/btn"
                     >
                       <span>Acessar Ferramenta</span>
                       {tool.isExternal ? (
@@ -212,16 +212,16 @@ export default function FerramentasPage() {
           </div>
 
           {/* Bottom Back Button & Note */}
-          <div className="mt-16 text-center bg-[#faf9f6] rounded-2xl p-8 border border-gray-100">
-            <h3 className="text-lg font-bold text-brand-black mb-2">
+          <div className="mt-16 text-center bg-[#faf9f6] rounded-2xl p-8 sm:p-10 border border-gray-100">
+            <h3 className="text-xl sm:text-2xl font-bold text-brand-black mb-3">
               Precisa de uma ferramenta personalizada para sua empresa?
             </h3>
-            <p className="text-sm text-gray-600 max-w-xl mx-auto mb-6">
+            <p className="text-base text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">
               Desenvolvemos sistemas web, calculadoras, dashboards e ferramentas sob medida com alta performance, APIs e banco de dados.
             </p>
             <Link
               href="/#contato"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-brand-black bg-white hover:bg-gold-50 border border-gray-200 hover:border-gold-300 transition-all shadow-sm"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-base font-bold text-brand-black bg-white hover:bg-gold-50 border border-gray-200 hover:border-gold-300 transition-all shadow-sm"
             >
               <span>Fazer Orçamento de Sistema Web</span>
               <ArrowRight className="w-4 h-4 text-gold-600" />
